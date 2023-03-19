@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/23d99ab88b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="" alt="logo" class="logo"> -->
+                <h1>Emmanuel</h1>
+                <ul id="sidemenu"> 
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark " onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header_text">
+                <p>FullStack Developer</p>
+                <h1>Hi, I'm <span>Emmanuel Ojile</span>  <br> From Nigeria</h1>
+            </div>
+        </div>
+    </div>
+{{!-- about --}}
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_col_1">
+                    <img src="images/IMG_0069.jpeg" alt="myPic">
+                </div>
+                <div class="about_col_2">
+                    <h1 class="sub_title header_font">About Me</h1>
+                    <p id="about_content">My Tech Journey has been a series of project based learning sessions. Am a hardworking Junior Developer with good technical and problem solving skills. I'm always willing to learn and adapt new technologies. Being a good listener I pay attention to details and communicate well with very codial social skills  </p>
+
+                    <div class="tab_titles">
+                        <p class="tab_links active_link" onclick="opentab('skills')">Tech Stack</p>
+                        <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab_links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab_contents active_tab" id="skills">
+                        <ul>
+                            <li><span>Front-End</span><br>HTMl, CSS, JavaScript</li>
+                            <li><span>Back-End</span><br>NodeJs,Express, MySQL and MongoDB</li>
+                            <li><span>FrameWork,Libraries and Others</span><br>TailWindCss, BootStrap, React, PostMan, Git&GitHub </li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="experience">
+                        <ul>
+                            <li><span>March - June 2022</span><br>Front-end Internship Training At HiiT Plc</li>
+                            <li><span>August - December 2022</span><br>Back-end Internship Training At HiiT Plc</li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="education">
+                        <ul>
+                            <li><span>Oct 2018 - Current</span><br>Department of Computer Science (B.Sc)
+                                Michael Okpara University of Agriculture, Abia State</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{!-- services --}}
+    <div id="services">
+        <div class="container">
+            <h1 class="sub_title header_font">My Services</h1>
+            <div class="services_list">
+                <div>
+                    <i class="fa-solid fa-display"></i>
+                    <h2>Front-end Services</h2>
+                    <p>My services include designing and maintaining front-end websites and applications using HTML, CSS, JavaScript and other related technologies like using frameWorks such as TailWind and BootStrap as well as Libries like ReactJs. Also I optimize web pages for maximum speed and scalability. Stay up-to-date with changes in design, features, or content. In addition I manage the source codes and maintain different development versions using the Git version control system </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-server"></i>
+                    <h2>Back-end Services</h2>
+                    <p>I design server-side applications and integrate front-end technologies. My services involve creating REST APIs and configuring servers for deployment, building database schemas, writing unit/functional tests for optimising web applications  as well as supporting existing application code. Furthermore, I collaborate effectively with team members and web designers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------projects----------------->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub_title header_font">Projects</h1>
+            <div class="work_list">
+                <div class="work">
+                    <img src="./images/book_api.jpg" alt="">
+                    <div class="layer">
+                        <h3>My Portfolio Site</h3>
+                        <p>Upon completing my fullstack training I was motivated by my tutor to build my portfolio site immediatly to sell my self and skills to potential recruiters in the market industry and here it is</p>
+                        <div class="project_links">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-solid fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/weather_img.jpg" alt="">
+                    <div class="layer">
+                        <h3>Weather App</h3>
+                        <p>The Drive behind this project was to increase my proficiency in React using a third party Api</p>
+                        <div class="project_links">
+                            <a href="https://github.com/Emmyojile/react_weather_app.git"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://emmyojile.github.io/weather_app_react/"><i class="fa-solid fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="./images/bootcamp_img.jpg" alt="">
+                    <div class="layer">
+                        <h3>OJ-TECH BootCamp website</h3>
+                        <p> I created a BootCamp website using express handlebars templating engine providing dynamic page content and routes to different pages on the site</p>
+                        <div class="project_links">
+                            <a href="https://github.com/Emmyojile/FINAL_BACKEND_PROJECT.git"><i class="fa-brands fa-github"></i></a>
+                            <a href="http://oj-tech.cyclic.app/"><i class="fa-solid fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="btn">See More</a> -->
+        </div>
+    </div>
+    {{!-- contact --}}
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact_left">
+                    <h1 class="sub_title header_font">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> emmaojile99@gmail.com</p>
+                    <p> <i class="fa-solid fa-square-phone"></i> 09063199422</p>
+                    <div class="social_icons">
+                        <!-- <a href="
+                        https://www.instagram.com/contact/?i=dch8qknb9epj&utm_content=7aeahgd"><i class="fa-brands fa-instagram"></i></a> -->
+                        <a href="https://twitter.com/EmmanuelOjile7?t=KIx7XpTtGbiSs75UUrUJfQ&s=09"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://github.com/Emmyojile"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ojile-emmanuel-6847a524b/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="./images/MY_RESUME.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact_right">
+                    <form name="submit-to-google-sheet" action="/submitForm">
+                        <h3 style="color: brown;">{{msg}}</h3>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                         
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> <strong>&copy; Copyright My Portfolio</strong>
+                 <br> <br> Designed By Emmy</p>
+        </div>
+
+        <button id="scroll_up">
+            <i class="fa-solid fa-angle-up"></i>
+        </button>
+    </div>
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab_links")
+        var tabcontents = document.getElementsByClassName("tab_contents")
+
+        function opentab(tabname) {
+            for(tablink of tablinks){
+                tablink.classList.remove("active_link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active_tab");
+            }
+            event.currentTarget.classList.add("active_link");
+            document.getElementById(tabname).classList.add("active_tab");
+        }
+
+    </script>
+    <script>
+        var sidemenu = document.getElementById('sidemenu');
+
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-iolGQYYegdb_oPNezPliZMeK7qJKvxq7mXTbyK3prN8cgP0VgeKSApWy5Hky1SQD/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function (){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+      <script>
+        const btnScrollToTop = document.getElementById('scroll_up');
+
+        window.onscroll = function(){scrollToTop()};
+
+        function scrollToTop() {
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                btnScrollToTop.style.display = 'block';
+            } else{
+                btnScrollToTop.style.display = 'none';
+            }
+        }
+
+        btnScrollToTop.addEventListener('click', function(){
+            document.documentElement.scrollTop = 0;
+        })
+      </script>
+</body>
+</html>
