@@ -157,10 +157,10 @@
                     <a href="./images/MY_RESUME.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact_right">
-                    <form name="submit-to-google-sheet" action="/submitForm">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form method="post" action="/send">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
                         
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>

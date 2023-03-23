@@ -3,17 +3,36 @@ const express = require('express');
 const connectDB = require('./db/connect');
 const app = express();
 const port = process.env.PORT || 5000;
+const path = require('path');
 const router = require('./routes/form');
 const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars');
+// const {engine} = require('express-handlebars')
 const nodemailer = require('nodemailer');
+
+const {engine}  = require('express-handlebars');
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-app.set('views', './views');
+
+// app.engine('handlebars', engine());
+// app.set('view engine', 'handlebars');
+// app.set('views', './views');
+
+// Body parser middleware
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 app.use(express.static('./public'))
 app.use(express.json());
+
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, './public', 'index.html'));
+// })
+
+//Trying to server up the expresshandlebars file
+app.get('/', (req, res) => {
+    res.render('form')
+})
 
 app.use('/', router);
 

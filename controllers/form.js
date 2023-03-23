@@ -1,34 +1,61 @@
 const form = require('../models/form')
+const nodemailer = require('nodemailer')
 
 exports.submitForm = async (req,res) => {
-    try {
-        const formMessage = await form.create({...req.body})
-        return res.status(200).render({msg : "I have received your message "})
-
-    } catch (error) {
-        return res.status(400)
-    }
+    res.render('form')
 }
 
+exports.thankYouPage = async (req, res) => {
+    res.render('send')
+}
 
+exports.send = async (req, res) => {
+    // const output = `
+    //     <p>You have a new contact request</p>
+    //     <h3>Contact Details</h3>
+    //     <ul>
+    //         <li>Name: ${req.body.name}</li>
+    //         <li>Name: ${req.body.email}</li>
+    //     </ul>
+    //     <h3>Message</h3>
+    //     <p>${req.body.message}}</p>
+    // `;
 
-// controllers/contactController.js
+     const transport = nodemailer.createTransport({
+        service : 'gmail',
+        auth : {
+            user : process.env.email,
+            pass : process.env.password
+        }
+    })
 
-// const express = require('express');
-// const router = express.Router();
-// const emailModel = require('../models/emailModel');
+    const mailoptions = {
+        from : req.body.email,
+        to : 'emmaojile99@gmail.com',
+        subject : 'Portfolio Contact',
+        html : `<p>You have a new contact request</p>
+        <h3>Contact Details</h3>
+        <ul>
+            <li>Name: ${req.body.name}</li>
+            <li>Email: ${req.body.email}</li>
+        </ul>
+        <h3>Message</h3>
+        <p>${req.body.message}</p>`
+    }
 
-// router.get('/', (req, res) => {
-//   res.render('contactForm');
-// });
+    transport.sendMail(mailoptions, (err, info) => {
+        if (err) {
+            console.log(err)
+        }
+        console.log(info)
+    })
+    res.render('send', {msg: 'Email has been sent'})
+}
 
-// router.post('/', (req, res) => {
-//   const data = {
-//     email: req.body.email,
-//     message: req.body.message
-//   };
-//   emailModel.send(data);
-//   res.render('contactForm', { success: true });
-// });
-
-// module.exports = router;
+exports.backToPortfolio = (req, res) => {
+    try {
+        return res.render('form')
+    } catch (error) {
+        console.log(error);
+    }
+}

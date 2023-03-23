@@ -49,7 +49,7 @@
                 </div>
                 <div class="about_col_2">
                     <h1 class="sub_title header_font">About Me</h1>
-                    <p id="about_content">My Tech Journey has been a series of project based learning sessions. Am a hardworking Junior Developer with good technical and problem solving skills. I'm always willing to learn and adapt new technologies. Being a good listener I pay attention to details and communicate well with very codial social skills  </p>
+                    <p id="about_content">My Tech Journey has been a series of project based learning sessions. Am a hardworking Developer with good technical and problem solving skills. I'm always willing to learn and adapt new technologies. Being a good listener I pay attention to details and communicate well with very codial social skills  </p>
 
                     <div class="tab_titles">
                         <p class="tab_links active_link" onclick="opentab('skills')">Tech Stack</p>
@@ -103,7 +103,7 @@
             <h1 class="sub_title header_font">Projects</h1>
             <div class="work_list">
                 <div class="work">
-                    <img src="./images/book_api.jpg" alt="">
+                    <img src="./images/new_image.jpg" alt="" class="pimg">
                     <div class="layer">
                         <h3>My Portfolio Site</h3>
                         <p>Upon completing my fullstack training I was motivated by my tutor to build my portfolio site immediatly to sell my self and skills to potential recruiters in the market industry and here it is</p>
@@ -157,11 +157,11 @@
                     <a href="./images/MY_RESUME.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact_right">
-                    <form name="submit-to-google-sheet" action="/submitForm">
-                        <h3 style="color: brown;">{{msg}}</h3>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form method="POST" action="/send">
+                        {{!-- <h3 style="color: brown;">{{msg}}</h3> --}}
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
                          
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
